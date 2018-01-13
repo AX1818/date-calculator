@@ -27,7 +27,7 @@ public class DateCalculator {
   }
 
   public static long daysInBetween(int year, int month, int day, int year2, int month2, int day2) {
-    if ((year * 10000 + month * 100 + day) > (year2 * 10000 + month2 * 100 + day2)) {
+    if (isAfter(year, month, day, year2, month2, day2)) {
       return -1 * daysInBetweenAscendDates(year2, month2, day2, year, month, day);
     }
 
@@ -51,5 +51,9 @@ public class DateCalculator {
     }
 
     return gapDays;
+  }
+
+  public static boolean isAfter(int year, int month, int day, int year2, int month2, int day2) {
+    return (year * 10000 + month * 100 + day) > (year2 * 10000 + month2 * 100 + day2);
   }
 }
