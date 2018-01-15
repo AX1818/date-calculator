@@ -39,7 +39,7 @@ the two dates using the following algorithm for *`daysInBetween(int year, int mo
    daysInBetween = leftOverDaysOfStartDateInStartYear + passedDaysOfEndDateInEndYear + totalDaysOfGapYears;
    ```
    
- ## How to build the 
+ ## How to build the project
  This is a maven java 8 project. Therefore, maven and Java 8 are needed to build the project. Then, All you need to do is to run:
   ```
   mvn package
